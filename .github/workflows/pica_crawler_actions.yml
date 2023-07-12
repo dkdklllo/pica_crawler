@@ -2,8 +2,8 @@ name: pica_crawler
 
 on:
   #将下面两行代码取消注释
-  #schedule:
-    #- cron: "0 0 * * *"
+  schedule:
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -20,9 +20,9 @@ jobs:
           pip install requests
       - name: main logic
         env:
-          PICA_SECRET_KEY: ${{secrets.PICA_SECRET_KEY}}
-          PICA_ACCOUNT: ${{secrets.PICA_ACCOUNT}}
-          PICA_PASSWORD: ${{secrets.PICA_PASSWORD}}
+          PICA_SECRET_KEY: ${{C69BAF41DA5ABD1FFEDC6D2FEA56B}}
+          PICA_ACCOUNT: ${{1525272003}}
+          PICA_PASSWORD: ${{gjt20030327}}
           # 过滤分区 用,分隔
           CATEGORIES: CG雜圖,生肉,耽美花園,偽娘哲學,扶他樂園,性轉換,SAO 刀劍神域,WEBTOON,Cosplay
           # CATEGORIES_RULE 过滤规则    INCLUDE: 包含任意一个分区就下载  EXCLUDE: 包含任意一个分区就不下载
@@ -45,7 +45,7 @@ jobs:
           EMAIL_ACCOUNT: ${{secrets.EMAIL_ACCOUNT}}
           EMAIL_AUTH_CODE: ${{secrets.EMAIL_AUTH_CODE}}
           # 收信邮箱的smtp服务器地址
-          EMAIL_SERVER_HOST: smtp.qq.com
+          EMAIL_SERVER_HOST: 3131771405@qq.com
           # 压缩包的最大大小(MB),也就是收信邮箱支持的最大附件大小 qq/新浪:50  outlook:20
           EMAIL_ATTACH_SIZE: 50
           # 收信邮箱服务器的加密方式 true:STARTTLS false:TLS    outlook邮箱只能为true,qq邮箱true和false都可以
